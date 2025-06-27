@@ -632,21 +632,11 @@ h2 {
     background-repeat: no-repeat;
 }
 
-.paymentIcon.paypal::after {
-    background-image: url(../assets/paypal.svg);
-}
-
-.paymentIcon.zelle::after {
-    background-image: url(../assets/zelle.svg);
-}
-
-.paymentIcon.cashapp::after {
-    background-image: url(../assets/cashapp.svg);
-}
-
 .paymentNote {
     font-size: 0.9rem;
     color: #777;
+    text-align: center;
+    font-style: italic;
 }
 
 /* Venue Section */
