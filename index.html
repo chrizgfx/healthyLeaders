@@ -10,6 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+    >
 </head>
 <body>
     <header class="mainHeader">
@@ -31,12 +36,13 @@
     </header>
 
     <section class="heroSection">
+        <div class="gradientOverlay"></div>
         <div class="geometricPattern"></div>
         <div class="heroContent">
-            <h2>THE LOGOS CONNECTION PRESENTS</h2>
-            <h1>Healthy Leaders Summit 2.0</h1>
-            <p class="eventDate">March 28-29, 2025</p>
-            <p class="eventLocation">The Connecting Place, Charlotte, NC</p>
+            <h2>The Logo Connection Presents</h2>
+            <img src="assets/healthyleaderflyer2.png" alt="Healthy Leaders Summit Logo" class="heroLogo">
+            <p class="eventTagline">Renew Your Vision. Restore Your Passion. Reimagine Your Leadership.</p>
+            <p class="eventDate">September 12-13, 2025</p>
             <a href="#tickets" class="ctaButton">Register Now</a>
         </div>
     </section>
@@ -52,17 +58,17 @@
                 </div>
                 <div class="aboutHighlights">
                     <div class="highlightItem">
-                        <div class="highlightIcon" aria-hidden="true"></div>
+                        <div class="highlightIcon" aria-hidden="true"><i class="fas fa-bolt"></i></div>
                         <h3>Empowerment</h3>
                         <p>Gain powerful insights and strategies from experienced leaders</p>
                     </div>
                     <div class="highlightItem">
-                        <div class="highlightIcon" aria-hidden="true"></div>
+                        <div class="highlightIcon" aria-hidden="true"><i class="fas fa-sync-alt"></i></div>
                         <h3>Renewal</h3>
                         <p>Rejuvenate your leadership passion and vision</p>
                     </div>
                     <div class="highlightItem">
-                        <div class="highlightIcon" aria-hidden="true"></div>
+                        <div class="highlightIcon" aria-hidden="true"><i class="fas fa-link"></i></div>
                         <h3>Connection</h3>
                         <p>Network with like-minded leaders and build valuable relationships</p>
                     </div>
@@ -137,54 +143,42 @@
             <h2 class="sectionTitle">Registration & Tickets</h2>
             <div class="patternDivider"></div>
             
+            <div class="ticketInfoContainer">
+                <p class="ticketInfo">
+                    All attendees must <b>register</b> for the Healthy Leaders Summit 2.0. Choose from our early bird or standard registration options to secure your spot at this transformative event.
+                </p>
+                <div>
+                    <ul class="ticketFeatures">
+                        <li>Full access to all summit sessions</li>
+                        <li>Summit materials and resources</li>
+                    </ul>
+                    <ul class="ticketFeatures">
+                        <li>Networking opportunities</li>
+                        <li>Meals and refreshments included</li>
+                    </ul>
+                </div>
+            </div>
+
             <div class="ticketOptions">
-                <div class="ticketCard">
+                <div class="ticketCard featured">
                     <div class="ticketHeader">
                         <h3>Early Bird Registration</h3>
                         <div class="ticketPrice">$75</div>
+                        <p>Ends on August 12th, 2025</p>
                     </div>
                     <div class="ticketBody">
-                        <ul class="ticketFeatures">
-                            <li>Full access to all summit sessions</li>
-                            <li>Summit materials and resources</li>
-                            <li>Networking opportunities</li>
-                            <li>Meals and refreshments included</li>
-                        </ul>
-                        <div class="ticketStatus">Sale Ended</div>
-                    </div>
-                </div>
-                
-                <div class="ticketCard featured">
-                    <div class="ticketHeader">
-                        <h3>Standard Registration</h3>
-                        <div class="ticketPrice">$100</div>
-                    </div>
-                    <div class="ticketBody">
-                        <ul class="ticketFeatures">
-                            <li>Full access to all summit sessions</li>
-                            <li>Summit materials and resources</li>
-                            <li>Networking opportunities</li>
-                            <li>Meals and refreshments included</li>
-                            <li>Digital access to session recordings</li>
-                        </ul>
-                        <div class="ticketButton">Register Now</div>
+                        <a href="https://square.link/u/LwIaUkoj" class="ticketButton">Register Now</a>
                     </div>
                 </div>
                 
                 <div class="ticketCard">
                     <div class="ticketHeader">
-                        <h3>Group Registration</h3>
-                        <div class="ticketPrice">$85<span class="perPerson">/person</span></div>
+                        <h3>Standard Registration</h3>
+                        <div class="ticketPrice">$100</div>
+                        <p>Ends on September 12th, 2025</p>
                     </div>
                     <div class="ticketBody">
-                        <ul class="ticketFeatures">
-                            <li>Groups of 5 or more</li>
-                            <li>Full access to all summit sessions</li>
-                            <li>Summit materials and resources</li>
-                            <li>Networking opportunities</li>
-                            <li>Meals and refreshments included</li>
-                        </ul>
-                        <div class="ticketButton">Register Group</div>
+                        <a href="https://square.link/u/aSINpGMU" class="ticketButton">Register Now</a>
                     </div>
                 </div>
             </div>
@@ -192,7 +186,6 @@
             <div class="paymentSection">
                 <h3>Payment Options</h3>
                 <div class="paymentOptions">
-                    <!-- Payment integration placeholders -->
                     <div class="paymentOption" id="paypalOption">
                         <div class="paymentIcon paypal"></div>
                         <span>PayPal</span>
@@ -254,23 +247,23 @@
                 <p>Have questions about the Healthy Leaders Summit? Get in touch with our team.</p>
                 <div class="contactMethods">
                     <div class="contactMethod">
-                        <div class="contactIcon email"></div>
+                        <div class="contactIcon email"><i class="fas fa-envelope"></i></div>
                         <h3>Email</h3>
                         <p>info@simplybje.com</p>
                     </div>
                     <div class="contactMethod">
-                        <div class="contactIcon phone"></div>
+                        <div class="contactIcon phone"><i class="fas fa-phone-alt"></i></div>
                         <h3>Phone</h3>
                         <p>(704) 266-0685</p>
                     </div>
                     <div class="contactMethod">
-                        <div class="contactIcon social"></div>
+                        <div class="contactIcon social"><i class="fa-solid fa-circle-user"></i></div>
                         <h3>Social Media</h3>
                         <div class="socialLinks">
                             <a href="#" class="socialLink facebook" aria-label="Facebook"></a>
                             <a href="#" class="socialLink twitter" aria-label="Twitter"></a>
                             <a href="#" class="socialLink instagram" aria-label="Instagram"></a>
-                            <a href="#" class="socialLink linkedin" aria-label="LinkedIn"></a>
+                            <!-- <a href="#" class="socialLink linkedin" aria-label="LinkedIn"></a> -->
                         </div>
                     </div>
                 </div>

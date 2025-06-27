@@ -85,35 +85,6 @@ $(document).ready(function() {
         }
     });
     
-    // Simple form validation for contact (if needed in future)
-    $('.contactForm').on('submit', function(event) {
-        // This section is commented out since we don't have a form yet
-        // But the code is ready for future implementation
-        /*
-        event.preventDefault();
-        
-        let valid = true;
-        const requiredFields = $(this).find('[required]');
-        
-        requiredFields.each(function() {
-            if (!$(this).val()) {
-                valid = false;
-                $(this).addClass('error');
-            } else {
-                $(this).removeClass('error');
-            }
-        });
-        
-        if (valid) {
-            // Form submission logic here
-            alert('Thank you for your message! We will get back to you soon.');
-            $(this)[0].reset();
-        } else {
-            alert('Please fill in all required fields.');
-        }
-        */
-    });
-    
     // Animate elements when they come into view
     const fadeInElements = $('.heroContent, .aboutContent, .scheduleGrid, .ticketOptions, .venueDetails, .contactInfo');
     

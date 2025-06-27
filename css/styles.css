@@ -170,16 +170,38 @@ h2 {
 
 /* Hero Section */
 .heroSection {
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     background-color: var(--light-color);
     overflow: hidden;
+    padding: 10rem 0;
+    padding-bottom: 6rem;
+}
+
+.gradientOverlay {
+    background: linear-gradient(135deg,rgba(34, 85, 179, 1) 40%, rgba(205, 188, 141, 1) 75%, rgba(248, 231, 184, 1) 99%);
+    opacity: 0.4;
+    filter: saturate(1.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .geometricPattern {
+    background-image: url('../assets/whiteDia.svg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* .geometricPattern {
     position: absolute;
     top: 0;
     left: 0;
@@ -194,7 +216,7 @@ h2 {
         linear-gradient(60deg, var(--secondary-color) 25%, transparent 25.5%, transparent 75%, var(--secondary-color) 75%, var(--secondary-color));
     background-size: 80px 140px;
     background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
-}
+} */
 
 .heroContent {
     text-align: center;
@@ -203,6 +225,10 @@ h2 {
     border-radius: 1rem;
     box-shadow: var(--shadow-medium);
     position: relative;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
     /* z-index: 1; */
     max-width: 800px;
 }
@@ -211,21 +237,35 @@ h2 {
     font-size: 1.5rem;
     color: var(--secondary-color);
     margin-bottom: 1rem;
+    text-transform: uppercase;
 }
 
-.heroContent h1 {
+/* .heroContent h1 {
     font-size: 3.5rem;
     color: var(--primary-color);
     margin-bottom: 1.5rem;
+} */
+
+.heroContent img {
+    width: 50rem;
+    height: auto;
+    margin-bottom: 1.3rem;
+    border-radius: 1rem;
 }
 
-.eventDate, .eventLocation {
+.eventDate {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
+.eventTagline {
+    font-size: .9rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
 .heroContent .ctaButton {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 /* About Section */
@@ -282,7 +322,7 @@ h2 {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: 2px solid var(--primary-color);
+    border: 2px solid;
     box-sizing: border-box;
 }
 
@@ -292,21 +332,38 @@ h2 {
     width: 85%;
     height: 85%;
     border-radius: 50%;
-    background: var(--gradient-primary);
     opacity: 0.1;
 }
 
 .highlightItem:nth-child(1) .highlightIcon::after {
-    background: var(--gradient-primary);
+    background: var(--primary-dark);
 }
-
+.highlightItem:nth-child(1) .highlightIcon::before {
+    border-color: var(--primary-pale);
+}
+.highlightItem:nth-child(1) .highlightIcon i {
+    color: var(--primary-pale);
+}
+/*  */
 .highlightItem:nth-child(2) .highlightIcon::after {
-    background: var(--gradient-secondary);
+    background: var(--secondary-color);
 }
-
+.highlightItem:nth-child(2) .highlightIcon::before {
+    border-color: var(--secondary-light);
+}
+.highlightItem:nth-child(2) .highlightIcon i {
+    color: var(--secondary-light);
+}
+/*  */
 .highlightItem:nth-child(3) .highlightIcon::after {
-    background: linear-gradient(135deg, var(--secondary-color), var(--secondary-light));
+    background: var(--secondary-pale);
 }
+.highlightItem:nth-child(3) .highlightIcon::before {
+    border-color: var(--secondary-light);
+}
+.highlightItem:nth-child(3) .highlightIcon i {
+    color: var(--secondary-light);
+}   
 
 .highlightItem h3 {
     color: var(--primary-color);
@@ -325,22 +382,9 @@ h2 {
     position: absolute;
     top: 0;
     right: 0;
-    width: 300px;
-    height: 300px;
-    background-image: radial-gradient(var(--primary-color) 2px, transparent 2px);
-    background-size: 30px 30px;
-    opacity: 0.1;
-}
-
-.scheduleSection::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 200px;
-    height: 200px;
-    background-image: radial-gradient(var(--secondary-color) 2px, transparent 2px);
-    background-size: 20px 20px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--off-white);
     opacity: 0.1;
 }
 
@@ -403,19 +447,48 @@ h2 {
 .ticketsSection::before {
     content: '';
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 0;
     width: 100%;
-    height: 1px;
-    background-image: linear-gradient(90deg, 
-        transparent, 
-        transparent 50%, 
-        var(--primary-color) 50%, 
-        var(--primary-color) 51%, 
-        transparent 51%, 
-        transparent);
-    background-size: 20px 1px;
-    opacity: 0.2;
+    height: 100%;
+    opacity: .03;
+}
+
+.ticketInfoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.ticketInfoContainer p {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.ticketInfoContainer div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+}
+
+.ticketFeatures {
+    text-align: left;
+}
+
+.ticketFeatures li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.ticketFeatures li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: 700;
 }
 
 .ticketOptions {
@@ -483,25 +556,6 @@ h2 {
     text-align: center;
 }
 
-.ticketFeatures {
-    margin-bottom: 1.5rem;
-    text-align: left;
-}
-
-.ticketFeatures li {
-    padding: 0.5rem 0;
-    position: relative;
-    padding-left: 1.5rem;
-}
-
-.ticketFeatures li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--secondary-color);
-    font-weight: 700;
-}
-
 .ticketStatus {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -553,7 +607,6 @@ h2 {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    cursor: pointer;
     transition: transform 0.3s;
 }
 
@@ -762,9 +815,10 @@ h2 {
     align-items: center;
     justify-content: center;
     position: relative;
+    color: var(--primary-color);
 }
 
-.contactIcon::before {
+.contactIcon::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -774,15 +828,18 @@ h2 {
     opacity: 0.1;
 }
 
-.contactIcon::after {
+.contactIcon::before {
     content: '';
     position: absolute;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--primary-color);
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    z-index: 2;
 }
 
-.contactIcon.email::after {
+/* .contactIcon.email::after {
     content: '✉';
 }
 
@@ -792,7 +849,7 @@ h2 {
 
 .contactIcon.social::after {
     content: '👥';
-}
+} */
 
 .contactMethod h3 {
     margin-bottom: 0.75rem;
@@ -937,9 +994,15 @@ h2 {
     }
 }
 
+@media (max-width: 800px) {
+    .heroContent img {
+        width: 30rem;
+    }
+}
+
 @media (max-width: 768px) {
     .heroSection {
-        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
     }
 
     .headerContainer {
@@ -958,13 +1021,44 @@ h2 {
         justify-content: center;
         font-size: .8rem;
     }
+
+    .heroContent {
+        padding: 1rem;
+        width: 80%;
+    }
+
+    .heroContent h2 {
+        font-size: .9rem;
+        margin-bottom: .5rem;
+    }
+
+    .heroContent img {
+        margin: 0 auto;
+        margin-bottom: .5rem;
+    }
     
-    .heroContent h1 {
-        font-size: 2.5rem;
+    .eventDate {
+        font-size: .9rem;
+        margin-bottom: 0;
+    }
+
+    .eventTagline {
+        font-size: .7rem;
+    }
+    
+    .ticketInfoContainer div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
     }
     
     .aboutHighlights {
         grid-template-columns: 1fr;
+    }
+
+    .aboutText p {
+        text-align: center;
     }
     
     .scheduleItem {
@@ -975,17 +1069,12 @@ h2 {
     .footerContainer {
         grid-template-columns: 1fr;
     }
-}
 
-@media (max-width: 480px) {
     .sectionTitle {
         font-size: 1.8rem;
     }
     
-    .heroContent h1 {
-        font-size: 2rem;
-    }
-      .ticketOptions {
+    .ticketOptions {
         grid-template-columns: 1fr;
     }
     
