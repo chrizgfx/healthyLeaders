@@ -420,9 +420,15 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
-.scheduleLocation {
+.scheduleStaff {
     color: var(--secondary-color);
     font-size: 0.9rem;
+}
+
+.scheduleDescription {
+    color: var(--secondary-dark);
+    opacity: 0.7;
+    font-size: 0.8rem;
 }
 
 /* Tickets Section */
